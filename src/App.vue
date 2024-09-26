@@ -31,13 +31,12 @@ let themeProvider = ref({});
 let curTheme = ref('light');
 function changeTheme(theme) {
   curTheme.value = theme;
-  // (prefers-color-scheme: dark)
   themeProvider.value = themeConfig[theme]; // ant-design 变量
   document.documentElement.setAttribute("data-theme", theme);  //  ant-design不存在的变量 
 }
 
 onMounted(() => {
-  watchSystemThemeChange();
+  // watchSystemThemeChange();
 })
 </script>
 
