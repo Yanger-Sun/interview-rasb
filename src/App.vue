@@ -1,6 +1,6 @@
 <template>
   <a-config-provider :theme="themeProvider">
-    <AButton type="primary" @click="changeTheme(curTheme == 'dark' ? 'light' : 'dark')">切换主题{{ curTheme }}</AButton>
+    <a-button type="primary" @click="changeTheme(curTheme == 'dark' ? 'light' : 'dark')">切换主题{{ curTheme }}</a-button>
     <projectVue />
   </a-config-provider>
 </template>
@@ -9,23 +9,6 @@
 import projectVue from '@/project/index.vue';
 import { onMounted, ref } from 'vue';
 import themeConfig from './config';
-
-// let matchMedia;
-// function watchSystemThemeChange() {
-//   matchMedia = window.matchMedia('(prefers-color-scheme:light)')
-//   changeTheme(matchMedia?.matches ? 'light' : 'dark');
-//   if (!matchMedia.onChange) {
-//     matchMedia.addEventListener('change', (event) => {
-//       // matched prefer
-//       console.log('改变')
-//       if (event.matches) {
-//         changeTheme('light');
-//       } else {
-//         changeTheme('dark');
-//       }
-//     });
-//   }
-// }
 
 let themeProvider = ref({});
 let curTheme = ref('light');
@@ -36,7 +19,6 @@ function changeTheme(theme) {
 }
 
 onMounted(() => {
-  // watchSystemThemeChange();
 })
 </script>
 
@@ -47,5 +29,5 @@ span{
 </style>
 
 <style lang="scss">
-@import url('./style-theme.scss');
+@import url('./assets/style-theme.scss');
 </style>
