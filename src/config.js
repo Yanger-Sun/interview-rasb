@@ -1,7 +1,7 @@
 const themeConfig = {
     light: {
         token: {
-            colorPrimary: '#27ba9b',
+            colorPrimary: '#1677ff',
             cardBackColor: '#ffffff',
         }
     },

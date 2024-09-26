@@ -1,12 +1,12 @@
 <template>
   <a-config-provider :theme="themeProvider">
     <a-button type="primary" @click="changeTheme(curTheme == 'dark' ? 'light' : 'dark')">切换主题{{ curTheme }}</a-button>
-    <projectVue />
+    <OverPanel />
   </a-config-provider>
 </template>
 
 <script setup>
-import projectVue from '@/project/index.vue';
+import OverPanel from './OverPanel.vue';
 import { onMounted, ref } from 'vue';
 import themeConfig from './config';
 

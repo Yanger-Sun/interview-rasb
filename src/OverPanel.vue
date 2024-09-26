@@ -14,12 +14,12 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
-import StepVue from './step.vue';
-import ProgressVue from './progress.vue';
 import { onMounted, ref, provide } from 'vue';
-import chartVue from './echart.vue';
-import { ProjectKey } from './symbols';
+import axios from 'axios';
+import StepVue from './project/step.vue';
+import ProgressVue from './project/progress.vue';
+import chartVue from './project/echart.vue';
+import { ProjectKey } from './project/symbols';
 
 const projectDetail = ref<Project>({});
 provide(ProjectKey, projectDetail);
